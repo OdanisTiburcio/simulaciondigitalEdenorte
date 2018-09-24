@@ -1,0 +1,7 @@
+﻿Elementos principales
+	Cajero/Estacion de servicio
+	Cliente
+
+Eventos posibles
+	Falta de luz
+	No disponibilidad del cajero por ...
