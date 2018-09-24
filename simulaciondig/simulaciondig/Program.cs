@@ -16,7 +16,7 @@ namespace simulaciondig
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmsimular());
+            Application.Run(new frmSimulador());
         }
     }
 }
