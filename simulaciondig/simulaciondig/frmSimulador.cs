@@ -23,12 +23,12 @@ namespace simulaciondig
             float tiempoespera;
             try
             {
-                representantes = int.Parse(tbRepresentantes.Text);
+                representantes = int.Parse(nudctdservidores.Text);
                 if (representantes < 2)
                 {
                     MessageBox.Show("Debe digitar una cantidad de representantes mayor que uno");
                 }
-                else if (tbRepresentantes.Text.ToString() == "Tanda 1(8:00am - 11:00am)")
+                else if (nudctdservidores.Text.ToString() == "Tanda 1(8:00am - 11:00am)")
                 {
                     lambda = 10;
                     mu = 12;
@@ -60,16 +60,16 @@ namespace simulaciondig
         }
         private void borrartextos()
         {
-            tbLamda.Text = "";
-            tbMu.Text = "";
-            tbRepresentantes.Text = "";
-            tbWq.Text = "";
+            nudtasallegada.Text = "";
+            nudtasaservicio.Text = "";
+            nudctdservidores.Text = "";
+            
         }
         private void llenarlistbox(List<string> probabilidad)
         {
             foreach (string calculoprob in probabilidad)
             {
-                lbProbabilidades.Items.Add(calculoprob);
+                
             }
         }
 
