@@ -2,6 +2,19 @@
 	Cajero/Estacion de servicio
 	Cliente
 
-Eventos posibles
-	Falta de luz
-	No disponibilidad del cajero por ...
+Eventos posibles Cajeros
+	Falta de luz	9%	20 minutos
+	Falla de planta/Inversor	1%	5minutos
+	PC se friza		15%	2 minutos
+	PC se reinicia por error en el sistema	1% 10 minutos
+	Internet se va	0.5%	10 minutos
+	No disponibilidad del cajero por:
+		Cuadre		10%		5 minutos
+		Baño		5%		5 minutos
+		--Comiendo	12.5%	1 hora
+
+Eventos posibles Clientes
+	Cliente se tarda en buscar elemento de transaccionalidad 18%	1 minuto
+	Cliente no escucha su llamado	7%	1 minuto
+	Cliente da informacion incorrecta	3%	3 minutos
+
