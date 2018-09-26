@@ -28,42 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.cbTanda = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabsimular = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblidsimulacion = new System.Windows.Forms.Label();
-            this.tbidsimulacion = new System.Windows.Forms.TextBox();
-            this.nudtasallegada = new System.Windows.Forms.NumericUpDown();
-            this.nudtasaservicio = new System.Windows.Forms.NumericUpDown();
-            this.nudctdservidores = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btncalcular = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.nudctdclientes = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbrecomendaciones = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.nudtasaservicio = new System.Windows.Forms.NumericUpDown();
+            this.nudtasallegada = new System.Windows.Forms.NumericUpDown();
+            this.tbidsimulacion = new System.Windows.Forms.TextBox();
+            this.lblidsimulacion = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.posibleevento1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.posibleevento2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiempoatraso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbrecomendaciones = new System.Windows.Forms.TextBox();
+            this.nudctdservidores = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btncalcular = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.valor1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabsimular.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudtasallegada)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudtasaservicio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudctdservidores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudctdclientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudtasaservicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudtasallegada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudctdservidores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -141,20 +147,72 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Valores";
             // 
-            // tabPage2
+            // label2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.White;
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.tbrecomendaciones);
-            this.tabPage2.Controls.Add(this.nudctdservidores);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.btncalcular);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(488, 361);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Simulación";
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
+            this.label2.Location = new System.Drawing.Point(7, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(234, 22);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Simulación Línea de Espera";
+            // 
+            // nudctdclientes
+            // 
+            this.nudctdclientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudctdclientes.Location = new System.Drawing.Point(110, 82);
+            this.nudctdclientes.Name = "nudctdclientes";
+            this.nudctdclientes.Size = new System.Drawing.Size(64, 26);
+            this.nudctdclientes.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(8, 86);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 18);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Ctd. Clientes:";
+            // 
+            // nudtasaservicio
+            // 
+            this.nudtasaservicio.DecimalPlaces = 2;
+            this.nudtasaservicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudtasaservicio.Location = new System.Drawing.Point(409, 47);
+            this.nudtasaservicio.Name = "nudtasaservicio";
+            this.nudtasaservicio.Size = new System.Drawing.Size(64, 26);
+            this.nudtasaservicio.TabIndex = 13;
+            // 
+            // nudtasallegada
+            // 
+            this.nudtasallegada.DecimalPlaces = 2;
+            this.nudtasallegada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudtasallegada.Location = new System.Drawing.Point(164, 47);
+            this.nudtasallegada.Name = "nudtasallegada";
+            this.nudtasallegada.Size = new System.Drawing.Size(64, 26);
+            this.nudtasallegada.TabIndex = 12;
+            // 
+            // tbidsimulacion
+            // 
+            this.tbidsimulacion.Enabled = false;
+            this.tbidsimulacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbidsimulacion.Location = new System.Drawing.Point(423, 12);
+            this.tbidsimulacion.Name = "tbidsimulacion";
+            this.tbidsimulacion.Size = new System.Drawing.Size(50, 24);
+            this.tbidsimulacion.TabIndex = 11;
+            // 
+            // lblidsimulacion
+            // 
+            this.lblidsimulacion.AutoSize = true;
+            this.lblidsimulacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidsimulacion.Location = new System.Drawing.Point(309, 15);
+            this.lblidsimulacion.Name = "lblidsimulacion";
+            this.lblidsimulacion.Size = new System.Drawing.Size(109, 18);
+            this.lblidsimulacion.TabIndex = 10;
+            this.lblidsimulacion.Text = "No.Simulación:";
             // 
             // dataGridView1
             // 
@@ -170,42 +228,75 @@
             this.dataGridView1.Size = new System.Drawing.Size(467, 234);
             this.dataGridView1.TabIndex = 9;
             // 
-            // lblidsimulacion
+            // cliente
             // 
-            this.lblidsimulacion.AutoSize = true;
-            this.lblidsimulacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidsimulacion.Location = new System.Drawing.Point(309, 15);
-            this.lblidsimulacion.Name = "lblidsimulacion";
-            this.lblidsimulacion.Size = new System.Drawing.Size(109, 18);
-            this.lblidsimulacion.TabIndex = 10;
-            this.lblidsimulacion.Text = "No.Simulación:";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cliente.DefaultCellStyle = dataGridViewCellStyle5;
+            this.cliente.HeaderText = "Cliente";
+            this.cliente.Name = "cliente";
+            this.cliente.Width = 70;
             // 
-            // tbidsimulacion
+            // posibleevento1
             // 
-            this.tbidsimulacion.Enabled = false;
-            this.tbidsimulacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbidsimulacion.Location = new System.Drawing.Point(423, 12);
-            this.tbidsimulacion.Name = "tbidsimulacion";
-            this.tbidsimulacion.Size = new System.Drawing.Size(50, 24);
-            this.tbidsimulacion.TabIndex = 11;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posibleevento1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.posibleevento1.HeaderText = "Evento_1";
+            this.posibleevento1.Name = "posibleevento1";
+            this.posibleevento1.Width = 120;
             // 
-            // nudtasallegada
+            // posibleevento2
             // 
-            this.nudtasallegada.DecimalPlaces = 2;
-            this.nudtasallegada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudtasallegada.Location = new System.Drawing.Point(164, 47);
-            this.nudtasallegada.Name = "nudtasallegada";
-            this.nudtasallegada.Size = new System.Drawing.Size(64, 26);
-            this.nudtasallegada.TabIndex = 12;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posibleevento2.DefaultCellStyle = dataGridViewCellStyle7;
+            this.posibleevento2.HeaderText = "Evento_2";
+            this.posibleevento2.Name = "posibleevento2";
+            this.posibleevento2.Width = 120;
             // 
-            // nudtasaservicio
+            // tiempoatraso
             // 
-            this.nudtasaservicio.DecimalPlaces = 2;
-            this.nudtasaservicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudtasaservicio.Location = new System.Drawing.Point(409, 47);
-            this.nudtasaservicio.Name = "nudtasaservicio";
-            this.nudtasaservicio.Size = new System.Drawing.Size(64, 26);
-            this.nudtasaservicio.TabIndex = 13;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiempoatraso.DefaultCellStyle = dataGridViewCellStyle8;
+            this.tiempoatraso.HeaderText = "Atraso";
+            this.tiempoatraso.Name = "tiempoatraso";
+            this.tiempoatraso.Width = 70;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.tbrecomendaciones);
+            this.tabPage2.Controls.Add(this.nudctdservidores);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.btncalcular);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(488, 361);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Simulación";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 231);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 18);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Recomendaciones:";
+            // 
+            // tbrecomendaciones
+            // 
+            this.tbrecomendaciones.Location = new System.Drawing.Point(5, 252);
+            this.tbrecomendaciones.Multiline = true;
+            this.tbrecomendaciones.Name = "tbrecomendaciones";
+            this.tbrecomendaciones.Size = new System.Drawing.Size(473, 103);
+            this.tbrecomendaciones.TabIndex = 19;
             // 
             // nudctdservidores
             // 
@@ -227,96 +318,46 @@
             // 
             // btncalcular
             // 
-            this.btncalcular.Location = new System.Drawing.Point(342, 14);
+            this.btncalcular.Location = new System.Drawing.Point(342, 8);
             this.btncalcular.Name = "btncalcular";
-            this.btncalcular.Size = new System.Drawing.Size(107, 60);
+            this.btncalcular.Size = new System.Drawing.Size(107, 40);
             this.btncalcular.TabIndex = 10;
             this.btncalcular.Text = "Calcular";
             this.btncalcular.UseVisualStyleBackColor = true;
             // 
-            // nudctdclientes
+            // dataGridView2
             // 
-            this.nudctdclientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudctdclientes.Location = new System.Drawing.Point(110, 82);
-            this.nudctdclientes.Name = "nudctdclientes";
-            this.nudctdclientes.Size = new System.Drawing.Size(64, 26);
-            this.nudctdclientes.TabIndex = 16;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.valor1,
+            this.valor2,
+            this.valor3,
+            this.valor4});
+            this.dataGridView2.Location = new System.Drawing.Point(5, 70);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(473, 158);
+            this.dataGridView2.TabIndex = 22;
             // 
-            // label7
+            // valor1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 86);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 18);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Ctd. Clientes:";
+            this.valor1.HeaderText = "Valor_1";
+            this.valor1.Name = "valor1";
             // 
-            // label2
+            // valor2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(7, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(234, 22);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Simulación Línea de Espera";
+            this.valor2.HeaderText = "Valor_2";
+            this.valor2.Name = "valor2";
             // 
-            // tbrecomendaciones
+            // valor3
             // 
-            this.tbrecomendaciones.Location = new System.Drawing.Point(5, 252);
-            this.tbrecomendaciones.Multiline = true;
-            this.tbrecomendaciones.Name = "tbrecomendaciones";
-            this.tbrecomendaciones.Size = new System.Drawing.Size(473, 103);
-            this.tbrecomendaciones.TabIndex = 19;
+            this.valor3.HeaderText = "Valor_3";
+            this.valor3.Name = "valor3";
             // 
-            // label6
+            // valor4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 231);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 18);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Recomendaciones:";
-            // 
-            // cliente
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cliente.DefaultCellStyle = dataGridViewCellStyle1;
-            this.cliente.HeaderText = "Cliente";
-            this.cliente.Name = "cliente";
-            this.cliente.Width = 70;
-            // 
-            // posibleevento1
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posibleevento1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.posibleevento1.HeaderText = "Evento_1";
-            this.posibleevento1.Name = "posibleevento1";
-            this.posibleevento1.Width = 120;
-            // 
-            // posibleevento2
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posibleevento2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.posibleevento2.HeaderText = "Evento_2";
-            this.posibleevento2.Name = "posibleevento2";
-            this.posibleevento2.Width = 120;
-            // 
-            // tiempoatraso
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tiempoatraso.DefaultCellStyle = dataGridViewCellStyle4;
-            this.tiempoatraso.HeaderText = "Atraso";
-            this.tiempoatraso.Name = "tiempoatraso";
-            this.tiempoatraso.Width = 70;
+            this.valor4.HeaderText = "Valor_4";
+            this.valor4.Name = "valor4";
             // 
             // frmSimulador
             // 
@@ -332,13 +373,14 @@
             this.tabsimular.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudctdclientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudtasaservicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudtasallegada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudtasallegada)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudtasaservicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudctdservidores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudctdclientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +411,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn posibleevento1;
         private System.Windows.Forms.DataGridViewTextBoxColumn posibleevento2;
         private System.Windows.Forms.DataGridViewTextBoxColumn tiempoatraso;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor4;
     }
 }
