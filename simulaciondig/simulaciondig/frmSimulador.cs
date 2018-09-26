@@ -56,7 +56,7 @@ namespace simulaciondig
         private void cbTanda_SelectedIndexChanged(object sender, EventArgs e)
         {
             borrartextos();
-            btnCalcular.Enabled = true;
+            btncalcular.Enabled = true;
         }
         private void borrartextos()
         {
@@ -71,6 +71,11 @@ namespace simulaciondig
             {
                 lbProbabilidades.Items.Add(calculoprob);
             }
+        }
+
+        private void frmSimulador_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
