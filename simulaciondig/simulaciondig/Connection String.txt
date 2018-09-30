@@ -1,0 +1,1 @@
+DefaultEndpointsProtocol=https;AccountName=odanistiburcio;AccountKey=AYjoa7wke3godHdIh2AoSGRBzjV53aEn20/E7tZragCJS8FtWRTaCDHGWVtaMhGPIIkqOkqOGCuH8qqoezS1Kw==;EndpointSuffix=core.windows.net
