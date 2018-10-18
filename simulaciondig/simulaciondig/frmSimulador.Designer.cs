@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.cbTanda = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,21 +39,11 @@
             this.tabsimular = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DgvResultados = new System.Windows.Forms.DataGridView();
-            this.NoSimulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lq = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ls = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Wq = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ws = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PP0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PP5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PP10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbidsimulacion = new System.Windows.Forms.TextBox();
             this.lblidsimulacion = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbrecomendaciones = new System.Windows.Forms.TextBox();
             this.BtnCalcular = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,10 +53,22 @@
             this.NudTasaServicio = new System.Windows.Forms.NumericUpDown();
             this.NudTasaLlegada = new System.Windows.Forms.NumericUpDown();
             this.DgvEventos = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.LbxEventos = new System.Windows.Forms.ListBox();
             this.Evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PosibTanda1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PosibTanda2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Atraso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoSimulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ls = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ws = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PP0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PP5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PP10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LbxRecomendaciones = new System.Windows.Forms.ListBox();
             this.tabsimular.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResultados)).BeginInit();
@@ -89,6 +91,7 @@
             // 
             // cbTanda
             // 
+            this.cbTanda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTanda.FormattingEnabled = true;
             this.cbTanda.Items.AddRange(new object[] {
@@ -98,6 +101,7 @@
             this.cbTanda.Name = "cbTanda";
             this.cbTanda.Size = new System.Drawing.Size(181, 28);
             this.cbTanda.TabIndex = 1;
+            this.cbTanda.SelectedIndexChanged += new System.EventHandler(this.cbTanda_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -123,27 +127,30 @@
             // 
             this.tabsimular.Controls.Add(this.tabPage2);
             this.tabsimular.Controls.Add(this.tabPage1);
-            this.tabsimular.Location = new System.Drawing.Point(3, 3);
+            this.tabsimular.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabsimular.Location = new System.Drawing.Point(0, 0);
             this.tabsimular.Name = "tabsimular";
             this.tabsimular.SelectedIndex = 0;
-            this.tabsimular.Size = new System.Drawing.Size(586, 537);
+            this.tabsimular.Size = new System.Drawing.Size(635, 543);
             this.tabsimular.TabIndex = 11;
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.LbxRecomendaciones);
+            this.tabPage2.Controls.Add(this.LbxEventos);
             this.tabPage2.Controls.Add(this.DgvResultados);
             this.tabPage2.Controls.Add(this.tbidsimulacion);
             this.tabPage2.Controls.Add(this.lblidsimulacion);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.tbrecomendaciones);
             this.tabPage2.Controls.Add(this.BtnCalcular);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(578, 511);
+            this.tabPage2.Size = new System.Drawing.Size(627, 517);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Simulación";
             // 
@@ -168,53 +175,8 @@
             this.DgvResultados.Location = new System.Drawing.Point(6, 87);
             this.DgvResultados.Name = "DgvResultados";
             this.DgvResultados.RowHeadersVisible = false;
-            this.DgvResultados.Size = new System.Drawing.Size(566, 294);
+            this.DgvResultados.Size = new System.Drawing.Size(615, 264);
             this.DgvResultados.TabIndex = 28;
-            // 
-            // NoSimulacion
-            // 
-            this.NoSimulacion.HeaderText = "Nro. Simulación";
-            this.NoSimulacion.Name = "NoSimulacion";
-            // 
-            // Lq
-            // 
-            this.Lq.HeaderText = "Lq";
-            this.Lq.Name = "Lq";
-            // 
-            // Ls
-            // 
-            this.Ls.HeaderText = "Ls";
-            this.Ls.Name = "Ls";
-            // 
-            // Wq
-            // 
-            this.Wq.HeaderText = "Wq";
-            this.Wq.Name = "Wq";
-            // 
-            // Ws
-            // 
-            this.Ws.HeaderText = "Ws";
-            this.Ws.Name = "Ws";
-            // 
-            // PP
-            // 
-            this.PP.HeaderText = "P";
-            this.PP.Name = "PP";
-            // 
-            // PP0
-            // 
-            this.PP0.HeaderText = "P0";
-            this.PP0.Name = "PP0";
-            // 
-            // PP5
-            // 
-            this.PP5.HeaderText = "P5";
-            this.PP5.Name = "PP5";
-            // 
-            // PP10
-            // 
-            this.PP10.HeaderText = "P10";
-            this.PP10.Name = "PP10";
             // 
             // tbidsimulacion
             // 
@@ -260,23 +222,15 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 384);
+            this.label6.Location = new System.Drawing.Point(6, 359);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(133, 18);
             this.label6.TabIndex = 21;
             this.label6.Text = "Recomendaciones";
             // 
-            // tbrecomendaciones
-            // 
-            this.tbrecomendaciones.Location = new System.Drawing.Point(6, 405);
-            this.tbrecomendaciones.Multiline = true;
-            this.tbrecomendaciones.Name = "tbrecomendaciones";
-            this.tbrecomendaciones.Size = new System.Drawing.Size(566, 103);
-            this.tbrecomendaciones.TabIndex = 19;
-            // 
             // BtnCalcular
             // 
-            this.BtnCalcular.Location = new System.Drawing.Point(446, 8);
+            this.BtnCalcular.Location = new System.Drawing.Point(498, 8);
             this.BtnCalcular.Name = "BtnCalcular";
             this.BtnCalcular.Size = new System.Drawing.Size(126, 47);
             this.BtnCalcular.TabIndex = 10;
@@ -301,7 +255,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(578, 511);
+            this.tabPage1.Size = new System.Drawing.Size(627, 517);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Valores";
             // 
@@ -322,6 +276,12 @@
             this.NudServidores.Name = "NudServidores";
             this.NudServidores.Size = new System.Drawing.Size(75, 26);
             this.NudServidores.TabIndex = 26;
+            this.NudServidores.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.NudServidores.ValueChanged += new System.EventHandler(this.NudServidores_ValueChanged);
             // 
             // label8
             // 
@@ -331,7 +291,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(113, 18);
             this.label8.TabIndex = 25;
-            this.label8.Text = "Servidores ( c ):";
+            this.label8.Text = "Servidores ( s ):";
             // 
             // label2
             // 
@@ -355,6 +315,7 @@
             131072});
             this.NudTasaServicio.Location = new System.Drawing.Point(469, 47);
             this.NudTasaServicio.Name = "NudTasaServicio";
+            this.NudTasaServicio.ReadOnly = true;
             this.NudTasaServicio.Size = new System.Drawing.Size(82, 26);
             this.NudTasaServicio.TabIndex = 13;
             // 
@@ -369,11 +330,13 @@
             131072});
             this.NudTasaLlegada.Location = new System.Drawing.Point(164, 47);
             this.NudTasaLlegada.Name = "NudTasaLlegada";
+            this.NudTasaLlegada.ReadOnly = true;
             this.NudTasaLlegada.Size = new System.Drawing.Size(75, 26);
             this.NudTasaLlegada.TabIndex = 12;
             // 
             // DgvEventos
             // 
+            this.DgvEventos.AllowUserToAddRows = false;
             this.DgvEventos.AllowUserToDeleteRows = false;
             this.DgvEventos.AllowUserToResizeRows = false;
             this.DgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -387,51 +350,124 @@
             this.DgvEventos.Location = new System.Drawing.Point(6, 152);
             this.DgvEventos.Name = "DgvEventos";
             this.DgvEventos.RowHeadersVisible = false;
-            this.DgvEventos.Size = new System.Drawing.Size(566, 356);
+            this.DgvEventos.Size = new System.Drawing.Size(618, 356);
             this.DgvEventos.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(311, 359);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 18);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Eventos";
+            // 
+            // LbxEventos
+            // 
+            this.LbxEventos.FormattingEnabled = true;
+            this.LbxEventos.Location = new System.Drawing.Point(314, 379);
+            this.LbxEventos.Name = "LbxEventos";
+            this.LbxEventos.Size = new System.Drawing.Size(307, 134);
+            this.LbxEventos.TabIndex = 29;
             // 
             // Evento
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Evento.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Evento.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Evento.FillWeight = 300F;
             this.Evento.HeaderText = "Evento";
             this.Evento.Name = "Evento";
             // 
             // PosibTanda1
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PosibTanda1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.PosibTanda1.HeaderText = "Probabilidad Tanda 1";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosibTanda1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.PosibTanda1.HeaderText = "Probabilidad Tanda 1 (%)";
             this.PosibTanda1.Name = "PosibTanda1";
             // 
             // PosibTanda2
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PosibTanda2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.PosibTanda2.HeaderText = "Probabilidad Tanda 2";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosibTanda2.DefaultCellStyle = dataGridViewCellStyle11;
+            this.PosibTanda2.HeaderText = "Probabilidad Tanda 2 (%)";
             this.PosibTanda2.Name = "PosibTanda2";
             // 
             // Atraso
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Atraso.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Atraso.HeaderText = "Atraso";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Atraso.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Atraso.HeaderText = "Atraso (en minutos)";
             this.Atraso.Name = "Atraso";
+            // 
+            // NoSimulacion
+            // 
+            this.NoSimulacion.HeaderText = "Nro. Simulación";
+            this.NoSimulacion.Name = "NoSimulacion";
+            // 
+            // Lq
+            // 
+            this.Lq.HeaderText = "Lq";
+            this.Lq.Name = "Lq";
+            // 
+            // Ls
+            // 
+            this.Ls.HeaderText = "Ls";
+            this.Ls.Name = "Ls";
+            // 
+            // Wq
+            // 
+            this.Wq.HeaderText = "Wq (m)";
+            this.Wq.Name = "Wq";
+            // 
+            // Ws
+            // 
+            this.Ws.HeaderText = "Ws (m)";
+            this.Ws.Name = "Ws";
+            // 
+            // PP
+            // 
+            this.PP.HeaderText = "P";
+            this.PP.Name = "PP";
+            // 
+            // PP0
+            // 
+            this.PP0.HeaderText = "P0";
+            this.PP0.Name = "PP0";
+            // 
+            // PP5
+            // 
+            this.PP5.HeaderText = "P5";
+            this.PP5.Name = "PP5";
+            // 
+            // PP10
+            // 
+            this.PP10.HeaderText = "P10";
+            this.PP10.Name = "PP10";
+            // 
+            // LbxRecomendaciones
+            // 
+            this.LbxRecomendaciones.FormattingEnabled = true;
+            this.LbxRecomendaciones.Location = new System.Drawing.Point(6, 380);
+            this.LbxRecomendaciones.Name = "LbxRecomendaciones";
+            this.LbxRecomendaciones.Size = new System.Drawing.Size(302, 134);
+            this.LbxRecomendaciones.TabIndex = 29;
             // 
             // frmSimulador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 543);
+            this.ClientSize = new System.Drawing.Size(635, 543);
             this.Controls.Add(this.tabsimular);
             this.Name = "frmSimulador";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simulación Digital";
+            this.Load += new System.EventHandler(this.frmSimulador_Load);
             this.tabsimular.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -460,7 +496,6 @@
         private System.Windows.Forms.NumericUpDown NudTasaLlegada;
         private System.Windows.Forms.Button BtnCalcular;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbrecomendaciones;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
@@ -469,14 +504,16 @@
         private System.Windows.Forms.NumericUpDown NudServidores;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Evento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Atraso;
         private System.Windows.Forms.DataGridViewTextBoxColumn P0;
         private System.Windows.Forms.DataGridViewTextBoxColumn P5;
         private System.Windows.Forms.DataGridViewTextBoxColumn P10;
         private System.Windows.Forms.DataGridView DgvResultados;
+        private System.Windows.Forms.ListBox LbxEventos;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Atraso;
         private System.Windows.Forms.DataGridViewTextBoxColumn NoSimulacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lq;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ls;
@@ -486,5 +523,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PP0;
         private System.Windows.Forms.DataGridViewTextBoxColumn PP5;
         private System.Windows.Forms.DataGridViewTextBoxColumn PP10;
+        private System.Windows.Forms.ListBox LbxRecomendaciones;
     }
 }

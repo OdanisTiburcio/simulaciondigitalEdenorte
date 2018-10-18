@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Azure;
-using Microsoft.WindowsAzure.Storage;
+//using Microsoft.Azure;
+//using Microsoft.WindowsAzure.Storage;
 
 namespace simulaciondig
 {
@@ -19,8 +19,8 @@ namespace simulaciondig
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmSimulador());
-            CloudStorageAccount cloudstorage = CloudStorageAccount.Parse(
-                CloudConfigurationManager.GetSetting("odanistiburcio_AzureStorageConnectionString"));
+            //CloudStorageAccount cloudstorage = CloudStorageAccount.Parse(
+            //    CloudConfigurationManager.GetSetting("odanistiburcio_AzureStorageConnectionString"));
         }
     }
 }
