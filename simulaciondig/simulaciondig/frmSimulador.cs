@@ -28,7 +28,7 @@ namespace simulaciondig
             {
                 if(c*miu <= lambda)
                 {
-                    MessageBox.Show("No se cumple la Condicion para POBLACION INFINITA, COLA MULTIPLE.\nc*μ<=λ");
+                    MessageBox.Show("No se cumple la condición para POBLACIÓN INFINITA, COLA MÚLTIPLE.\nc*μ<=λ");
                     return;
                 }
             }
@@ -118,7 +118,7 @@ namespace simulaciondig
             }
             if (LbxEventos.Items.Count > 0)
             {
-                LbxEventos.Items.Add(string.Format(" Timpo total agregado en horas: {0:N}",(tiempo / 60)));
+                LbxEventos.Items.Add(string.Format("Tiempo total agregado en horas: {0:N}",(tiempo / 60)));
                 lambda += 3.4M * tiempo / 60; 
             }
         }
@@ -144,12 +144,12 @@ namespace simulaciondig
         private void frmSimulador_Load(object sender, EventArgs e)
         {
             DgvEventos.Rows.Add("Falta de luz", "8", "9", "20");
-            DgvEventos.Rows.Add("Fallla de planta/inversor", "1", "2", "30");
+            DgvEventos.Rows.Add("Falla de planta/inversor", "1", "2", "30");
             DgvEventos.Rows.Add("Computador se congela", "5", "8", "20");
             DgvEventos.Rows.Add("Computador se reinicia por error en el sistema", "1", "1", "10");
-            DgvEventos.Rows.Add("Error de conexion a internet", "3", "1", "10");
+            DgvEventos.Rows.Add("Error de conexión a internet", "3", "1", "10");
             DgvEventos.Rows.Add("Servidor cuadrando caja", "10", "14", "12");
-            DgvEventos.Rows.Add("Servidor fuerda de servicio", "7", "13", "8");
+            DgvEventos.Rows.Add("Servidor fuera de servicio", "7", "13", "8");
             DgvEventos.Rows.Add("Servidor almorzando", "12.5", "0", "60");
             DgvEventos.Rows.Add("Búsqueda del elemento clave para la transacción", "18", "15", "1");
             DgvEventos.Rows.Add("Cliente no acude al servidor al ser llamado", "9", "7", "1");
@@ -220,15 +220,21 @@ namespace simulaciondig
 
         private void cbTanda_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbTanda.SelectedIndex == 0)
+            Random rnd = new Random();
+            if (cbTanda.SelectedIndex == 0)
             {
-                NudTasaLlegada.Value = 28;
-                NudTasaServicio.Value = 17;
+                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(26,30));
+                NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
+            }
+            else if (cbTanda.SelectedIndex == 1)
+            {
+                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(31, 35));
+                NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
             }
             else
             {
-                NudTasaLlegada.Value = 32;
-                NudTasaServicio.Value = 17;
+                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(36, 40));
+                NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
             }
         }
 

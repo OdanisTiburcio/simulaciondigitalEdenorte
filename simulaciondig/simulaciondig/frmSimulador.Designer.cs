@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.cbTanda = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabsimular = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.LbxRecomendaciones = new System.Windows.Forms.ListBox();
+            this.LbxEventos = new System.Windows.Forms.ListBox();
             this.DgvResultados = new System.Windows.Forms.DataGridView();
             this.tbidsimulacion = new System.Windows.Forms.TextBox();
             this.lblidsimulacion = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnCalcular = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -53,8 +56,6 @@
             this.NudTasaServicio = new System.Windows.Forms.NumericUpDown();
             this.NudTasaLlegada = new System.Windows.Forms.NumericUpDown();
             this.DgvEventos = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.LbxEventos = new System.Windows.Forms.ListBox();
             this.Evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PosibTanda1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PosibTanda2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +69,6 @@
             this.PP0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PP5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PP10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LbxRecomendaciones = new System.Windows.Forms.ListBox();
             this.tabsimular.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResultados)).BeginInit();
@@ -85,9 +85,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(311, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 18);
+            this.label1.Size = new System.Drawing.Size(88, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tanda:";
+            this.label1.Text = "Temporada:";
             // 
             // cbTanda
             // 
@@ -95,11 +95,12 @@
             this.cbTanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTanda.FormattingEnabled = true;
             this.cbTanda.Items.AddRange(new object[] {
-            "Tanda 1 (8:00am - 2:00pm)",
-            "Tanda 2 (2:01pm - 6:00pm)"});
-            this.cbTanda.Location = new System.Drawing.Point(370, 79);
+            "Baja",
+            "Media",
+            "Alta"});
+            this.cbTanda.Location = new System.Drawing.Point(405, 79);
             this.cbTanda.Name = "cbTanda";
-            this.cbTanda.Size = new System.Drawing.Size(181, 28);
+            this.cbTanda.Size = new System.Drawing.Size(146, 28);
             this.cbTanda.TabIndex = 1;
             this.cbTanda.SelectedIndexChanged += new System.EventHandler(this.cbTanda_SelectedIndexChanged);
             // 
@@ -153,6 +154,22 @@
             this.tabPage2.Size = new System.Drawing.Size(627, 517);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Simulación";
+            // 
+            // LbxRecomendaciones
+            // 
+            this.LbxRecomendaciones.FormattingEnabled = true;
+            this.LbxRecomendaciones.Location = new System.Drawing.Point(6, 380);
+            this.LbxRecomendaciones.Name = "LbxRecomendaciones";
+            this.LbxRecomendaciones.Size = new System.Drawing.Size(302, 134);
+            this.LbxRecomendaciones.TabIndex = 29;
+            // 
+            // LbxEventos
+            // 
+            this.LbxEventos.FormattingEnabled = true;
+            this.LbxEventos.Location = new System.Drawing.Point(314, 379);
+            this.LbxEventos.Name = "LbxEventos";
+            this.LbxEventos.Size = new System.Drawing.Size(307, 134);
+            this.LbxEventos.TabIndex = 29;
             // 
             // DgvResultados
             // 
@@ -217,6 +234,16 @@
             this.label5.Size = new System.Drawing.Size(232, 20);
             this.label5.TabIndex = 23;
             this.label5.Text = "Simulación Línea de Espera";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(311, 359);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 18);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Eventos";
             // 
             // label6
             // 
@@ -353,54 +380,36 @@
             this.DgvEventos.Size = new System.Drawing.Size(618, 356);
             this.DgvEventos.TabIndex = 9;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(311, 359);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 18);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Eventos";
-            // 
-            // LbxEventos
-            // 
-            this.LbxEventos.FormattingEnabled = true;
-            this.LbxEventos.Location = new System.Drawing.Point(314, 379);
-            this.LbxEventos.Name = "LbxEventos";
-            this.LbxEventos.Size = new System.Drawing.Size(307, 134);
-            this.LbxEventos.TabIndex = 29;
-            // 
             // Evento
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Evento.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Evento.DefaultCellStyle = dataGridViewCellStyle13;
             this.Evento.FillWeight = 300F;
             this.Evento.HeaderText = "Evento";
             this.Evento.Name = "Evento";
             // 
             // PosibTanda1
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PosibTanda1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosibTanda1.DefaultCellStyle = dataGridViewCellStyle14;
             this.PosibTanda1.HeaderText = "Probabilidad Tanda 1 (%)";
             this.PosibTanda1.Name = "PosibTanda1";
             // 
             // PosibTanda2
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PosibTanda2.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosibTanda2.DefaultCellStyle = dataGridViewCellStyle15;
             this.PosibTanda2.HeaderText = "Probabilidad Tanda 2 (%)";
             this.PosibTanda2.Name = "PosibTanda2";
             // 
             // Atraso
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Atraso.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Atraso.DefaultCellStyle = dataGridViewCellStyle16;
             this.Atraso.HeaderText = "Atraso (en minutos)";
             this.Atraso.Name = "Atraso";
             // 
@@ -413,21 +422,25 @@
             // 
             this.Lq.HeaderText = "Lq";
             this.Lq.Name = "Lq";
+            this.Lq.ToolTipText = "Ctd. personas en cola";
             // 
             // Ls
             // 
             this.Ls.HeaderText = "Ls";
             this.Ls.Name = "Ls";
+            this.Ls.ToolTipText = "Ctd. personas en sistema";
             // 
             // Wq
             // 
             this.Wq.HeaderText = "Wq (m)";
             this.Wq.Name = "Wq";
+            this.Wq.ToolTipText = "Tiempo duración en cola";
             // 
             // Ws
             // 
             this.Ws.HeaderText = "Ws (m)";
             this.Ws.Name = "Ws";
+            this.Ws.ToolTipText = "Tiempo duración en sistema";
             // 
             // PP
             // 
@@ -448,14 +461,6 @@
             // 
             this.PP10.HeaderText = "P10";
             this.PP10.Name = "PP10";
-            // 
-            // LbxRecomendaciones
-            // 
-            this.LbxRecomendaciones.FormattingEnabled = true;
-            this.LbxRecomendaciones.Location = new System.Drawing.Point(6, 380);
-            this.LbxRecomendaciones.Name = "LbxRecomendaciones";
-            this.LbxRecomendaciones.Size = new System.Drawing.Size(302, 134);
-            this.LbxRecomendaciones.TabIndex = 29;
             // 
             // frmSimulador
             // 
@@ -514,6 +519,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Atraso;
+        private System.Windows.Forms.ListBox LbxRecomendaciones;
         private System.Windows.Forms.DataGridViewTextBoxColumn NoSimulacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lq;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ls;
@@ -523,6 +529,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PP0;
         private System.Windows.Forms.DataGridViewTextBoxColumn PP5;
         private System.Windows.Forms.DataGridViewTextBoxColumn PP10;
-        private System.Windows.Forms.ListBox LbxRecomendaciones;
     }
 }
