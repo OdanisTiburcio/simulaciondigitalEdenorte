@@ -191,7 +191,7 @@ namespace simulaciondig
             {
                 sumatoria += ((1 / GetFactorial(i)) * (decimal)Math.Pow((double)(lambda / miu), i));
             }
-            multiplicacion = 1 / GetFactorial(c) * (decimal)((Math.Pow((double)(lambda / miu), c))) * (c * miu / (c * miu - lambda));
+            multiplicacion = (1 / GetFactorial(c)) * (decimal)((Math.Pow((double)(lambda / miu), c))) * ((c * miu) / ((c * miu) - lambda));
             resultado = 1 / (sumatoria + multiplicacion);
             return string.Format("{0:N}", resultado);
         }
@@ -208,7 +208,7 @@ namespace simulaciondig
             decimal resultado = 0M;
             if(v > c)
             {
-                resultado = ((decimal)Math.Pow((double)(lambda / miu), v) - Convert.ToDecimal(CalcP0())) / (GetFactorial(c) * (decimal)Math.Pow(c, (v - c)));
+                resultado = ((decimal)Math.Pow((double)(lambda / miu), v) * Convert.ToDecimal(CalcP0())) / ((GetFactorial(c) * (decimal)Math.Pow(c, (v - c))));
                 return string.Format("{0:N}", resultado);
             }
             else
