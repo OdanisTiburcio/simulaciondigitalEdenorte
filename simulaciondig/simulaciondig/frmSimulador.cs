@@ -220,16 +220,20 @@ namespace simulaciondig
 
         private void cbTanda_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbTanda.SelectedIndex == 0)
+            Random rnd = new Random();
+            if (cbTanda.SelectedIndex == 0)
             {
-                Random rnd = new Random();
                 NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(26,30));
+                NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
+            }
+            else if (cbTanda.SelectedIndex == 1)
+            {
+                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(31, 35));
                 NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
             }
             else
             {
-                Random rnd = new Random();
-                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(30, 34));
+                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(36, 40));
                 NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
             }
         }
