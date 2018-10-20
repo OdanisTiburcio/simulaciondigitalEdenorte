@@ -222,13 +222,15 @@ namespace simulaciondig
         {
             if(cbTanda.SelectedIndex == 0)
             {
-                NudTasaLlegada.Value = 28;
-                NudTasaServicio.Value = 17;
+                Random rnd = new Random();
+                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(26,30));
+                NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
             }
             else
             {
-                NudTasaLlegada.Value = 32;
-                NudTasaServicio.Value = 17;
+                Random rnd = new Random();
+                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(30, 34));
+                NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
             }
         }
 
