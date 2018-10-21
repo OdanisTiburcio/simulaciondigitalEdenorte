@@ -14,7 +14,7 @@ namespace simulaciondig
 
         private void BtnCalcular_Click(object sender, EventArgs e)
         {
-            if (cbTanda.SelectedIndex == 0 || cbTanda.SelectedIndex == 1)
+            if (cbTanda.SelectedIndex == 0 || cbTanda.SelectedIndex == 1 || cbTanda.SelectedIndex == 2)
                 Calcular();
             else
                 MessageBox.Show("Favor elegir una tanda antes de proceder.");
@@ -106,7 +106,14 @@ namespace simulaciondig
                         }
                         break;
                     case 1:
-                        if (random.Next(10000) <= Convert.ToInt32(row.Cells[2].Value.ToString()) * 100)
+                        if (random.Next(10000) <= Convert.ToDecimal(row.Cells[2].Value.ToString()) * 100)
+                        {
+                            tiempo += Convert.ToInt32(row.Cells[3].Value);
+                            LbxEventos.Items.Add(row.Cells[0].Value.ToString());
+                        }
+                        break;
+                    case 2:
+                        if (random.Next(10000) <= Convert.ToDecimal(row.Cells[3].Value.ToString()) * 100)
                         {
                             tiempo += Convert.ToInt32(row.Cells[3].Value);
                             LbxEventos.Items.Add(row.Cells[0].Value.ToString());
