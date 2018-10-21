@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.cbTanda = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +43,15 @@
             this.LbxRecomendaciones = new System.Windows.Forms.ListBox();
             this.LbxEventos = new System.Windows.Forms.ListBox();
             this.DgvResultados = new System.Windows.Forms.DataGridView();
+            this.NoSimulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ls = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ws = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PP0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PP5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PP10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbidsimulacion = new System.Windows.Forms.TextBox();
             this.lblidsimulacion = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,16 +70,8 @@
             this.Evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PosibTanda1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PosibTanda2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PosibTanda3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Atraso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoSimulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lq = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ls = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Wq = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ws = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PP0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PP5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PP10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabsimular.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResultados)).BeginInit();
@@ -194,6 +197,55 @@
             this.DgvResultados.RowHeadersVisible = false;
             this.DgvResultados.Size = new System.Drawing.Size(615, 264);
             this.DgvResultados.TabIndex = 28;
+            // 
+            // NoSimulacion
+            // 
+            this.NoSimulacion.HeaderText = "Nro. Simulación";
+            this.NoSimulacion.Name = "NoSimulacion";
+            // 
+            // Lq
+            // 
+            this.Lq.HeaderText = "Lq";
+            this.Lq.Name = "Lq";
+            this.Lq.ToolTipText = "Ctd. personas en cola";
+            // 
+            // Ls
+            // 
+            this.Ls.HeaderText = "Ls";
+            this.Ls.Name = "Ls";
+            this.Ls.ToolTipText = "Ctd. personas en sistema";
+            // 
+            // Wq
+            // 
+            this.Wq.HeaderText = "Wq (m)";
+            this.Wq.Name = "Wq";
+            this.Wq.ToolTipText = "Tiempo duración en cola";
+            // 
+            // Ws
+            // 
+            this.Ws.HeaderText = "Ws (m)";
+            this.Ws.Name = "Ws";
+            this.Ws.ToolTipText = "Tiempo duración en sistema";
+            // 
+            // PP
+            // 
+            this.PP.HeaderText = "P";
+            this.PP.Name = "PP";
+            // 
+            // PP0
+            // 
+            this.PP0.HeaderText = "P0";
+            this.PP0.Name = "PP0";
+            // 
+            // PP5
+            // 
+            this.PP5.HeaderText = "P5";
+            this.PP5.Name = "PP5";
+            // 
+            // PP10
+            // 
+            this.PP10.HeaderText = "P10";
+            this.PP10.Name = "PP10";
             // 
             // tbidsimulacion
             // 
@@ -368,12 +420,29 @@
             this.DgvEventos.AllowUserToResizeRows = false;
             this.DgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvEventos.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEventos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvEventos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Evento,
             this.PosibTanda1,
             this.PosibTanda2,
+            this.PosibTanda3,
             this.Atraso});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvEventos.DefaultCellStyle = dataGridViewCellStyle6;
             this.DgvEventos.Location = new System.Drawing.Point(6, 152);
             this.DgvEventos.Name = "DgvEventos";
             this.DgvEventos.RowHeadersVisible = false;
@@ -382,85 +451,45 @@
             // 
             // Evento
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Evento.DefaultCellStyle = dataGridViewCellStyle13;
-            this.Evento.FillWeight = 300F;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Evento.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Evento.FillWeight = 340F;
             this.Evento.HeaderText = "Evento";
             this.Evento.Name = "Evento";
             // 
             // PosibTanda1
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PosibTanda1.DefaultCellStyle = dataGridViewCellStyle14;
-            this.PosibTanda1.HeaderText = "Probabilidad Tanda 1 (%)";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosibTanda1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.PosibTanda1.FillWeight = 80F;
+            this.PosibTanda1.HeaderText = "Prob. Temporada Baja (%)";
             this.PosibTanda1.Name = "PosibTanda1";
             // 
             // PosibTanda2
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PosibTanda2.DefaultCellStyle = dataGridViewCellStyle15;
-            this.PosibTanda2.HeaderText = "Probabilidad Tanda 2 (%)";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosibTanda2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.PosibTanda2.FillWeight = 80F;
+            this.PosibTanda2.HeaderText = "Prob. Temporada Media (%)";
             this.PosibTanda2.Name = "PosibTanda2";
+            // 
+            // PosibTanda3
+            // 
+            this.PosibTanda3.FillWeight = 80F;
+            this.PosibTanda3.HeaderText = "Prob. Temporada Alta (%)";
+            this.PosibTanda3.Name = "PosibTanda3";
             // 
             // Atraso
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Atraso.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Atraso.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Atraso.FillWeight = 80F;
             this.Atraso.HeaderText = "Atraso (en minutos)";
             this.Atraso.Name = "Atraso";
-            // 
-            // NoSimulacion
-            // 
-            this.NoSimulacion.HeaderText = "Nro. Simulación";
-            this.NoSimulacion.Name = "NoSimulacion";
-            // 
-            // Lq
-            // 
-            this.Lq.HeaderText = "Lq";
-            this.Lq.Name = "Lq";
-            this.Lq.ToolTipText = "Ctd. personas en cola";
-            // 
-            // Ls
-            // 
-            this.Ls.HeaderText = "Ls";
-            this.Ls.Name = "Ls";
-            this.Ls.ToolTipText = "Ctd. personas en sistema";
-            // 
-            // Wq
-            // 
-            this.Wq.HeaderText = "Wq (m)";
-            this.Wq.Name = "Wq";
-            this.Wq.ToolTipText = "Tiempo duración en cola";
-            // 
-            // Ws
-            // 
-            this.Ws.HeaderText = "Ws (m)";
-            this.Ws.Name = "Ws";
-            this.Ws.ToolTipText = "Tiempo duración en sistema";
-            // 
-            // PP
-            // 
-            this.PP.HeaderText = "P";
-            this.PP.Name = "PP";
-            // 
-            // PP0
-            // 
-            this.PP0.HeaderText = "P0";
-            this.PP0.Name = "PP0";
-            // 
-            // PP5
-            // 
-            this.PP5.HeaderText = "P5";
-            this.PP5.Name = "PP5";
-            // 
-            // PP10
-            // 
-            this.PP10.HeaderText = "P10";
-            this.PP10.Name = "PP10";
             // 
             // frmSimulador
             // 
@@ -515,10 +544,6 @@
         private System.Windows.Forms.DataGridView DgvResultados;
         private System.Windows.Forms.ListBox LbxEventos;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Evento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Atraso;
         private System.Windows.Forms.ListBox LbxRecomendaciones;
         private System.Windows.Forms.DataGridViewTextBoxColumn NoSimulacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lq;
@@ -529,5 +554,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PP0;
         private System.Windows.Forms.DataGridViewTextBoxColumn PP5;
         private System.Windows.Forms.DataGridViewTextBoxColumn PP10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PosibTanda3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Atraso;
     }
 }

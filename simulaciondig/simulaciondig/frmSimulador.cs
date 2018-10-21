@@ -143,17 +143,17 @@ namespace simulaciondig
 
         private void frmSimulador_Load(object sender, EventArgs e)
         {
-            DgvEventos.Rows.Add("Falta de luz", "8", "9", "20");
-            DgvEventos.Rows.Add("Falla de planta/inversor", "1", "2", "30");
-            DgvEventos.Rows.Add("Computador se congela", "5", "8", "20");
-            DgvEventos.Rows.Add("Computador se reinicia por error en el sistema", "1", "1", "10");
-            DgvEventos.Rows.Add("Error de conexión a internet", "3", "1", "10");
-            DgvEventos.Rows.Add("Servidor cuadrando caja", "10", "14", "12");
-            DgvEventos.Rows.Add("Servidor fuera de servicio", "7", "13", "8");
-            DgvEventos.Rows.Add("Servidor almorzando", "12.5", "0", "60");
-            DgvEventos.Rows.Add("Búsqueda del elemento clave para la transacción", "18", "15", "1");
-            DgvEventos.Rows.Add("Cliente no acude al servidor al ser llamado", "9", "7", "1");
-            DgvEventos.Rows.Add("Cliente proporciona información incorrecta", "3", "4", "1");
+            DgvEventos.Rows.Add("Falta de luz", "8", "9", "7", "20");
+            DgvEventos.Rows.Add("Falla de planta/inversor", "1", "2", "1", "30");
+            DgvEventos.Rows.Add("Computador se congela", "5", "8", "8", "20");
+            DgvEventos.Rows.Add("Computador se reinicia por error en el sistema", "1", "1", "1", "10");
+            DgvEventos.Rows.Add("Error de conexión a internet", "3", "1", "1", "10");
+            DgvEventos.Rows.Add("Servidor cuadrando caja", "10", "14", "8", "12");
+            DgvEventos.Rows.Add("Servidor fuera de servicio", "7", "13", "14", "8");
+            DgvEventos.Rows.Add("Servidor almorzando", "12.5", "0", "0", "60");
+            DgvEventos.Rows.Add("Búsqueda del elemento clave para la transacción", "18", "15", "13", "1");
+            DgvEventos.Rows.Add("Cliente no acude al servidor al ser llamado", "9", "7", "6.6", "1");
+            DgvEventos.Rows.Add("Cliente proporciona información incorrecta", "3", "4", "3", "1");
         }
 
         private decimal GetFactorial(int i)
