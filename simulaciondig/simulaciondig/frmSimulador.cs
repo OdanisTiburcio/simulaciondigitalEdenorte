@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace simulaciondig
@@ -24,7 +23,7 @@ namespace simulaciondig
         private void Calcular()
         {
             tbidsimulacion.Text = iteracion.ToString();
-            SetVariablesAndProbabilies();       
+            SetVariablesAndProbabilites();       
             if(c > 1 && lambda > 30)
             {
                 if(c*miu <= lambda)
@@ -131,7 +130,7 @@ namespace simulaciondig
             }
         }
 
-        private void SetVariablesAndProbabilies()
+        private void SetVariablesAndProbabilites()
         {
             Random rnd = new Random();
             c = (int)NudServidores.Value;
@@ -159,7 +158,7 @@ namespace simulaciondig
             DgvEventos.Rows.Add("Error de conexión a internet", "3", "1", "1", "10");
             DgvEventos.Rows.Add("Servidor cuadrando caja", "10", "14", "8", "12");
             DgvEventos.Rows.Add("Servidor fuera de servicio", "7", "13", "14", "8");
-            DgvEventos.Rows.Add("Servidor almorzando", "12.5", "0", "0", "60");
+            DgvEventos.Rows.Add("Servidor almorzando", "12.5", "0", "0", "25");
             DgvEventos.Rows.Add("Búsqueda del elemento clave para la transacción", "18", "15", "13", "1");
             DgvEventos.Rows.Add("Cliente no acude al servidor al ser llamado", "9", "7", "6.6", "1");
             DgvEventos.Rows.Add("Cliente proporciona información incorrecta", "3", "4", "3", "1");
@@ -238,8 +237,8 @@ namespace simulaciondig
             {
                 minLambda = 26;
                 maxLambda = 29;
-                minMiu = 15;
-                maxMiu = 17;
+                minMiu = 16;
+                maxMiu = 18;
                 NudServidores.Value = 2;
             }
             else if (cbTanda.SelectedIndex == 1)
@@ -247,7 +246,7 @@ namespace simulaciondig
                 minLambda = 31;
                 maxLambda = 35;
                 minMiu = 13;
-                maxMiu = 17;
+                maxMiu = 18;
                 NudServidores.Value = 3;
             }
             else
@@ -255,7 +254,7 @@ namespace simulaciondig
                 minLambda = 36;
                 maxLambda = 40;
                 minMiu = 14;
-                maxMiu = 17;
+                maxMiu = 18;
                 NudServidores.Value = 3;
             }
         }
