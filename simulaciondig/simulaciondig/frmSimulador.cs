@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace simulaciondig
@@ -6,7 +7,7 @@ namespace simulaciondig
     public partial class frmSimulador : Form
     {
         decimal lambda, miu;
-        int c, iteracion = 1;
+        int c, iteracion = 1, minLambda = 0, maxLambda = 0, minMiu = 0, maxMiu = 0;
         public frmSimulador()
         {
             InitializeComponent();
@@ -28,13 +29,13 @@ namespace simulaciondig
             {
                 if(c*miu <= lambda)
                 {
-                    MessageBox.Show("No se cumple la condición para POBLACIÓN INFINITA, COLA MÚLTIPLE.\nc*μ<=λ");
+                    MessageBox.Show("No se cumple la condición para POBLACIÓN INFINITA, COLA MÚLTIPLE.\nc * μ > λ");
                     return;
                 }
             }
             RunEvents();
             UpdateGrid();
-            SetRecomendaciones(Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[1].Value), Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[2].Value), Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[3].Value), Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[4].Value), Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[5].Value) * 100);
+            SetRecomendaciones(Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[3].Value), Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[4].Value), Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[5].Value), Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[6].Value), Convert.ToDecimal(DgvResultados.Rows[DgvResultados.Rows.Count - 1].Cells[7].Value) * 100);
         }
 
         private void SetRecomendaciones(decimal lq, decimal ls, decimal wq, decimal ws, decimal p)
@@ -101,21 +102,21 @@ namespace simulaciondig
                     case 0:
                         if(random.Next(10000) <= Convert.ToDecimal(row.Cells[1].Value.ToString()) * 100)
                         {
-                            tiempo += Convert.ToInt32(row.Cells[3].Value);
+                            tiempo += Convert.ToInt32(row.Cells[4].Value);
                             LbxEventos.Items.Add(row.Cells[0].Value.ToString());
                         }
                         break;
                     case 1:
                         if (random.Next(10000) <= Convert.ToDecimal(row.Cells[2].Value.ToString()) * 100)
                         {
-                            tiempo += Convert.ToInt32(row.Cells[3].Value);
+                            tiempo += Convert.ToInt32(row.Cells[4].Value);
                             LbxEventos.Items.Add(row.Cells[0].Value.ToString());
                         }
                         break;
                     case 2:
                         if (random.Next(10000) <= Convert.ToDecimal(row.Cells[3].Value.ToString()) * 100)
                         {
-                            tiempo += Convert.ToInt32(row.Cells[3].Value);
+                            tiempo += Convert.ToInt32(row.Cells[4].Value);
                             LbxEventos.Items.Add(row.Cells[0].Value.ToString());
                         }
                         break;
@@ -132,14 +133,15 @@ namespace simulaciondig
 
         private void SetVariablesAndProbabilies()
         {
-            miu = NudTasaServicio.Value;
+            Random rnd = new Random();
             c = (int)NudServidores.Value;
-            lambda = NudTasaLlegada.Value;
+            miu = Convert.ToInt16(rnd.Next(minMiu, maxMiu));
+            lambda = Convert.ToInt16(rnd.Next(minLambda, maxLambda));
         }
 
         private void UpdateGrid()
         {
-            DgvResultados.Rows.Add(iteracion++, CalcLq(), CalcLs(), CalcWq(), CalcWs(), CalcP(), CalcP0(), CalcPn(5), CalcPn(10));
+            DgvResultados.Rows.Add(iteracion++, string.Format("{0:F0}",lambda), miu, CalcLq(), CalcLs(), CalcWq(), CalcWs(), CalcP(), CalcP0());   
         }   
 
         private void NudServidores_ValueChanged(object sender, EventArgs e)
@@ -189,6 +191,11 @@ namespace simulaciondig
             return string.Format("{0:N}", resultado);
         }
 
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            DgvResultados.Rows.Clear();
+        }
+
         private string CalcP0()
         {
             decimal resultado = 0M;
@@ -227,21 +234,29 @@ namespace simulaciondig
 
         private void cbTanda_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Random rnd = new Random();
             if (cbTanda.SelectedIndex == 0)
             {
-                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(26,30));
-                NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
+                minLambda = 26;
+                maxLambda = 29;
+                minMiu = 15;
+                maxMiu = 17;
+                NudServidores.Value = 2;
             }
             else if (cbTanda.SelectedIndex == 1)
             {
-                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(31, 35));
-                NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
+                minLambda = 31;
+                maxLambda = 35;
+                minMiu = 13;
+                maxMiu = 17;
+                NudServidores.Value = 3;
             }
             else
             {
-                NudTasaLlegada.Value = Convert.ToInt16(rnd.Next(36, 40));
-                NudTasaServicio.Value = Convert.ToInt16(rnd.Next(13, 17));
+                minLambda = 36;
+                maxLambda = 40;
+                minMiu = 14;
+                maxMiu = 17;
+                NudServidores.Value = 3;
             }
         }
 
